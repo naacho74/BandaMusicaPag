@@ -5,5 +5,6 @@ edad:number;
 nacionalidad:String;
 instagram:any;
 descripcion:String;
+audio:String
 
 }

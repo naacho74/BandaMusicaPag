@@ -2,5 +2,42 @@
 <h1 class="text-center my-4">Integrantes</h1>
 
 
+<div class="container">
+<div class="row row-12">
+    <div class="col-12" *ngFor="let integrante of integrantes">
+        <br><br>
+        <h2 class="text-center my-4">{{integrante.nombre}}</h2>
+        <img class="img-fluid mx-auto d-block shadow foto my-4" src="{{integrante.foto}}" alt="foto"> 
+        <div class="col edadYNacionalidad">
+
+            <h6>Edad {{integrante.edad}} Años</h6>
+            <h6>Nacionalidad {{integrante.nacionalidad}} </h6>
+        </div>
+        <br><br><br>
+       <div class="col-12 text-center">
+              <h6 class="col-6 mx-auto d-block">{{integrante.descripcion}} </h6> 
+
+<br>
+           <h5> <i><img src="../../assets/IMG/abajo.png" alt=""> <img src="../../assets/IMG/abajo.png" alt=""> </i>  Pruebame en solitario AQUI! <i><img src="../../assets/IMG/abajo.png" alt=""> <img src="../../assets/IMG/abajo.png" alt=""> </i> </h5>
+           
+        <audio controls>
+            <source src="{{integrante.audio}}" type="audio/ogg" >
+        </audio>
+     <a href="{{integrante.instagram}}" target="_blank">
+    <i> <h4> <img src="../../assets/IMG/instagram.png" alt=""> Sigueme en mi Instagram </h4> </i>     
+     </a>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+</div>
+
+
+
+
 <app-footer></app-footer>
 
