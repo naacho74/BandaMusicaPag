@@ -1,11 +1,30 @@
-<h1 class="text-center">APartamentos</h1>
+<app-menu></app-menu>
+
+<h1 class="text-center">Nuestras Canciones</h1>
 
 <div class="container">
-    <div class="row" >
-        <div class="col-12" *ngFor="let servicio of respuestaDeServicio">
-     <h1> {{servicio.nombre}}</h1>
 
-       <img class="w-100 img-fluid" src="{{servicio.imagenes[0]}}" alt="">     
-        </div>
+    <div class="row row-12"  *ngFor="let cancion of canciones">
+        
+      <div class="col-6 my-5 ">
+          <img class="mx-auto d-block shadow foto" src="{{cancion.album.images[0].url}}" alt="">
+        </div> 
+        <div class="col-6">
+            <br><br><br><br>
+            <h4 class=" my-5">{{cancion.name}}</h4>
+            <div>
+                <h5>Popularidad</h5>
+               
+               <p> <progress  max="100" value="{{cancion.popularity
+                }}"></progress> {{ cancion.popularity}}% </p>
+               </div>
+            <audio controls>
+                <source src="{{cancion.preview_url }}" type="audio/ogg">
+            </audio>
+
+        </div> 
+        <hr>
+
     </div>
+
 </div>
